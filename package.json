@@ -1,0 +1,11 @@
+{
+	"name": "socket-chat-demo",
+	"author": "Vincent Peybernes <vincent.peybernes@valtech.fr>",
+	"version": "0.1.0",
+	"engines": { "node": ">= 0.8.x" },
+	"url": "https://github.com/Techniv/socket-chat-demo",
+	"repository": { "type": "git", "url": "https://github.com/Techniv/socket-chat-demo.git" },
+	"dependencies": {
+		"socket.io": ">= 0.9.x"
+	}
+}
