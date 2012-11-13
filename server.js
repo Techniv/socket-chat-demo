@@ -27,7 +27,7 @@ function handler(req, res){
 			console.log(path);
 			console.log(err);
 			if(err){
-				console.log(err)
+				console.log(err);
 				res.writeHead(500);
 				res.end('ERROR');
 				return;
@@ -59,8 +59,8 @@ sock.on('connection',function(client){
 	});
 	
 	client.on('disconnect',function(){
-		client.broadcast.emit('Un chatteur est parti.')
-	})
+		client.broadcast.emit('Un chatteur est parti.');
+	});
 });
 //==================================================
 
