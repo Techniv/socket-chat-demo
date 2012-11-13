@@ -15,7 +15,7 @@ var pathLib = require('path');
 
 var app = http.createServer(handler);
 function handler(req, res){
-	var path = pathLib.resolve(__dirname+'/views'+req.url);
+	var path = pathLib.resolve(__dirname+'/www'+req.url);
 	
 	fs.exists(path,function(exists){
 		if(exists) var stat = fs.statSync(path);
