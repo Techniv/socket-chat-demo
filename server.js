@@ -19,7 +19,7 @@ function handler(req, res){
 	
 	fs.exists(path,function(exists){
 		if(exists) var stat = fs.statSync(path);
-		if(!stat || !stat.isFile()) path =  pathLib.resolve(__dirname+'/views/chat.html');
+		if(!stat || !stat.isFile()) path =  pathLib.resolve(__dirname+'/www/chat.html');
 		console.log(path);
 		console.log('-------------------------------------');
 		
