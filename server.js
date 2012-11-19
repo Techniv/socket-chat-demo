@@ -53,13 +53,15 @@ sock.on('connection',function(client){
 	client.emit('message','Bienvenue');
 	client.broadcast.emit('message','Nouvelle connexion');
 	
+	// Receive message  
 	client.on('send',function(message){
 		client.emit('message',message);
 		client.broadcast.emit('message',message);
 	});
 	
 	client.on('disconnect',function(){
-		client.broadcast.emit('Un chatteur est parti.');
+		console.log('Un chatteur est parti.');
+		sock.sockets.emit('message','Un chatteur est parti.');
 	});
 });
 //==================================================

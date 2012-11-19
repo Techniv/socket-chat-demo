@@ -1,9 +1,12 @@
 (function(window, jQuery){
 	var $ = jQuery;
+	var io = window.io;
 	
 	
 	$(document).ready(function(){
-		var sock = io.connect(); // defaut connection.
+		var sock = io.connect('/',{
+			'sync disconnect on unload': true
+		});
 		var box = $('#box');
 		var send = $('#send');
 		var field = $('#field');
