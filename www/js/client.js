@@ -8,14 +8,15 @@
 			'sync disconnect on unload': true
 		});
 		var box = $('#box');
-		var send = $('#send');
+		var chatForm = $('#chat');
 		var field = $('#field');
 		
 		sock.on('message',function(data){
 			box.append('<p>'+data+'</p>');
 		});
 		
-		send.on('click',function(){
+		chatForm.on('submit',function(e){
+			e.preventDefault();
 			var message = field.attr('value');
 			field.attr('value', '');
 			sock.emit('send',message);
